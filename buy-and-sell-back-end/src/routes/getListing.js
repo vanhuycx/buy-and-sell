@@ -7,7 +7,7 @@ export const getListingRoute = {
   handler: (req, h) => {
     const id = req.params.id;
     const listing = fakeListings.find((listing) => listing.id === id);
-    if (!listing) throw Boom.notFound(`Listing does not exist: id ${id}`);
+    if (!listing) throw Boom.notFound(`Listing does not exist with id ${id}`);
     return listing;
   },
 };
