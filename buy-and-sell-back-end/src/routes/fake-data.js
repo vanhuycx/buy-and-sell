@@ -2,7 +2,7 @@ export const fakeListings = [
   {
     id: "123",
     name: "Old Boat",
-    description: "A very old boat. Bargain price",
+    description: "A very old boat. There is NO bargain price",
     price: 700,
   },
   {
