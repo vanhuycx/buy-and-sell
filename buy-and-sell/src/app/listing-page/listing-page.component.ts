@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Listing } from '../types';
-import { fakeListings } from '../fake-data';
+import { ListingsService } from '../listings.service';
+
+//RxJs & HttpClient
+
 @Component({
   selector: 'app-listing-page',
   templateUrl: './listing-page.component.html',
@@ -9,9 +12,11 @@ import { fakeListings } from '../fake-data';
 export class ListingPageComponent implements OnInit {
   listings: Listing[] = [];
 
-  constructor() {}
+  constructor(private listingService: ListingsService) {}
 
   ngOnInit(): void {
-    this.listings = fakeListings;
+    this.listingService
+      .getListings()
+      .subscribe((listings) => (this.listings = listings));
   }
 }
