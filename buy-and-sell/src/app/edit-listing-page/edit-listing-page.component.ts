@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ListingsService } from '../listings.service';
 import { Listing } from '../types';
-import { fakeMyListings } from '../fake-data';
 
 @Component({
   selector: 'app-edit-listing-page',
